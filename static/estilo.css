@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Lastica;
+    src: url("fontes/FontsFree-Net-Lastica.ttf");
+}
+
+h1, label{
+    font-family: Lastica;
+}
+
+input[type="submit"]{
+    font-family: Lastica;
+    font-size: 12pt;
+    background-color: #163985;
+    color: white;
+    padding: 0.5em 2em;
+    border: none;
+    margin-top: 1%;
+}
+
+input[type="submit"]:hover{
+    background-color: #4465ad;
+}
+
+input[type="submit"]:active{
+    background-color: #30529b;
+}
+
+a{
+    font-size: 12pt;
+    font-family: Lastica;
+    background-color: #B2C5ED;
+    padding: 0.5em 2em;
+    border: none;
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:active{
+    background-color: #6d92e2;
+}
+
+a:hover{
+    background-color: #8aa5e0;
+}
+
+input[type="text"], input[type="password"]{
+    background-color: #D3E1FF;
+    border: none;
+    height: 28pt;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="text"]:hover, input[type="password"]:hover{
+    background-color: #b0c8fd;   
+}
+
+input[type="text"]:active, input[type="password"]:active{
+    background-color: #c5d7fd;   
+}
+
+body{
+    background-color: #3686A4;
+}
+
+#imagemPequenaLogin{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 18%;
+}
+
+#imagemGrandeLogin{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+}

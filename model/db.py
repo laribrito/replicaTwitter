@@ -26,3 +26,14 @@ def cadastra_usuario(login, senha, nome):
     con.execute("INSERT INTO usuario VALUES(NULL, ?, ?, ?)", \
     [login, senha, nome])
     con.commit()
+
+# Altera o nome de um usuário
+def altera_nome(login, nome):
+    con = get_db()
+    con.execute("UPDATE usuario SET nome = ? WHERE login = ?",[nome, login])
+    con.commit()
+# Altera a senha de um usuário
+def altera_senha(login, senha):
+    con = get_db()
+    con.execute("UPDATE usuario SET senha = ? WHERE login = ?",[senha, login])
+    con.commit()

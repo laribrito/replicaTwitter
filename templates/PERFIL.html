@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Página inicial / Coxitter</title>
+    <title>Perfil / Coxitter</title>
     <link href="../static/styles/estilo.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News Cycle">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News Cycle|Roboto">
     <script src="https://kit.fontawesome.com/17a3127d7b.js" crossorigin="anonymous"></script>
   </head>
   <body style="background-color: white; margin: 0;">
     <div id="barraLateralE">
       <div id="altImg">
-        <img src="{{ url_for('perfil_avatar', login=logado) }}" id="imagemPerfilPI">
+        <div class="circle">
+          <img src="{{ url_for('perfil_avatar', login=logado) }}" id="imagemPerfilPI">
+        </div>
         <a href="{{url_for('edicao')}}"><div class="half-circle" title="Alterar imagem de perfil"><i class="fas fa-camera" style="font-size: x-large;"></i></div></a>
       </div>
         <table>
@@ -54,9 +56,18 @@
       </div>
     </div>
     <div id="meioPagina">
-      <h2>PÁGINA INICIAL</h2>
-      
+      <h2>PERFIL</h2>
+      <div id="espacoPerfil">
+        <a href="{{url_for('edicao')}}" class="coxinhar btnEditar">EDITAR PERFIL</a>
+        <img id="imagemPerfil" src="{{ url_for('perfil_avatar', login=user.login) }}">
+        <p class="nome">{{ user.nome }} <span class="maisClaro">@{{ user.login }}</span></p>
+        <div id="seguidores">
+          <p class="nome seguidores">seguindo x</p>
+          <p class="nome seguidores">seguidores y</p>
+        </div>
+      </div>
     </div>
+
     <script>
       function hover(element) {
         element.setAttribute('src', '../static/imagens/queridoProfessor.png');
